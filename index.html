@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧠 Productivity Dashboard</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav>
+      <button class="tab active" data-tab="pomodoro">Pomodoro</button>
+      <button class="tab" data-tab="stopwatch">Stopwatch</button>
+      <button class="tab" data-tab="notes">Notes</button>
+      <button class="tab" data-tab="tasks">Tasks</button>
+    </nav>
+
+    <!-- Pomodoro Section -->
+    <section id="pomodoro" class="tab-content active">
+      <h2>Pomodoro Timer</h2>
+      <div class="timer" id="pomodoroDisplay">25:00</div>
+      <div class="controls">
+        <button id="startPomodoro">Start</button>
+        <button id="resetPomodoro">Reset</button>
+      </div>
+      <p id="sessionType">Work Session 🍅</p>
+    </section>
+
+    <!-- Stopwatch Section -->
+    <section id="stopwatch" class="tab-content">
+      <h2>Stopwatch</h2>
+      <div class="timer" id="stopwatchDisplay">00:00:00</div>
+      <div class="controls">
+        <button id="startStopwatch">Start</button>
+        <button id="resetStopwatch">Reset</button>
+      </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section id="notes" class="tab-content">
+      <h2>Notes</h2>
+      <textarea id="notesArea" placeholder="Write your notes..."></textarea>
+      <button id="saveNotes">💾 Save</button>
+    </section>
+
+    <!-- Tasks Section -->
+    <section id="tasks" class="tab-content">
+      <h2>To-Do List</h2>
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter a new task...">
+        <button id="addTask">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
