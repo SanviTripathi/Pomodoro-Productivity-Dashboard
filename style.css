@@ -1,0 +1,143 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --text-color: #333;
+  --button-bg: #74ebd5;
+  --button-hover: #ACB6E5;
+}
+
+body.dark {
+  --bg-gradient: linear-gradient(135deg, #1f1c2c, #928dab);
+  --card-bg: rgba(30, 30, 30, 0.9);
+  --text-color: #fff;
+  --button-bg: #4f46e5;
+  --button-hover: #6366f1;
+}
+
+.container {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#themeToggle {
+  border: none;
+  background: var(--button-bg);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.tab {
+  background: var(--button-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--button-hover);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.timer {
+  font-size: 2.5rem;
+  margin: 15px 0;
+}
+
+.controls button {
+  background: var(--button-bg);
+  color: #fff;
+  border: none;
+  margin: 5px;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 90%;
+  height: 120px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  background: var(--button-bg);
+  color: #fff;
+  margin: 5px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskList li.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+#taskList button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
